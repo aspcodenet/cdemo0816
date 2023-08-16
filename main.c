@@ -62,5 +62,27 @@ int main(){
     // printf("%d\n", 65);//65
     while(1){
         writeSpelPlan();
+
+        int invalidInput = 1;
+        while(invalidInput){
+            printf("\nSpelare 1 - vilken pos.");
+            char ch = getch(); // 
+            fflush(stdin);
+
+            for(int row = 0; row < 3; row++ ){
+                for(int col = 0; col < 3; col++ ){
+                    if(spelPlan[row][col] == ch){
+                        spelPlan[row][col] = 'X';
+                        invalidInput = 0;
+                        break;
+                    }
+                }
+                printf("\n");
+            }
+
+        }
+
+        
+        
     }
 }
